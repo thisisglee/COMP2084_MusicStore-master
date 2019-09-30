@@ -7,20 +7,21 @@ using System.Threading.Tasks;
 
 namespace COMP2084_MusicStore.Models
 {
-    public class Album
-    {
+    public class Song
+{   
         [Key]
-        public int AlbumId { get; set; }
+        public int SongId { get; set; }
 
-        [ForeignKey("Genre")]
-        public int GenreId { get; set; }
+        [ForeignKey("Album")]
+
+        public int AlbumId { get; set; }
 
         public string Name { get; set; }
 
-        public string Artist { get; set; }
+        public string ArtistName { get; set; }
 
-        public DateTime ReleaseDate { get; set; }
+        public string Featuring { get; set; }
 
-        public ICollection<Song> Songs { get; set; }
-    }
+        public int RunTimeSeconds { get; set; }
+}
 }
